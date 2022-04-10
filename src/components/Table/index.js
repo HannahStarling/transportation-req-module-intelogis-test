@@ -40,10 +40,8 @@ export const TransportationTable = ({ onApplicationChanges }) => {
   return (
     <Form form={form} onValuesChange={onApplicationChanges}>
       <Table
-        style={
-          { width: '50vw' } //вынести в styles
-        }
         scroll={{ x: true }}
+        pagination={{ position: ['bottomCenter'] }}
         columns={columns}
         dataSource={transportationRequests}
         bordered

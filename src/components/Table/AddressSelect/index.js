@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Select } from 'antd';
 import { addresses } from '../constants';
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 
 const { Option } = Select;
 
@@ -17,7 +17,7 @@ export const AddressSelect = ({ address }) => {
   return (
     <Select
       bordered={false}
-      style={{ minWidth: 300 }} //вынести в style
+      className={'.address__select'}
       defaultValue={address}
       showSearch
       filterOption={handleCaseSensitivity}

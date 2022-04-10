@@ -1,0 +1,22 @@
+@import '../components/Map/style.scss';
+@import '../components/Table/style';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/*  */
+.__dbk__container {
+  height: 100vh;
+}
+
+.custom-gutter-horizontal:hover {
+  cursor: col-resize;
+}
+
