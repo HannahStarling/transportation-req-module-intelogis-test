@@ -13,8 +13,8 @@
   width: 100vw;
 }
 
-.address__select {
-  min-width: 300px;
+.address__form-item {
+  margin: 0;
 }
 
 .ant-table-wrapper {

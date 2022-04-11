@@ -11,9 +11,7 @@ export const AddressSelect = ({ address, point, application }) => {
 
   return (
     <Form.Item
-      style={{
-        margin: 0,
-      }}
+      className="address__form-item"
       name={[String(application.key), point]}
       initialValue={address}
     >
