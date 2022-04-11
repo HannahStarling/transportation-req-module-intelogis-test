@@ -1,15 +1,7 @@
 import React from 'react';
 
 function AppContainer({ children }) {
-  return (
-    <main
-      style={
-        { display: 'flex' } //вынести в styles
-      }
-    >
-      {children}
-    </main>
-  );
+  return <main className=".app__container">{children}</main>;
 }
 
 export default AppContainer;
