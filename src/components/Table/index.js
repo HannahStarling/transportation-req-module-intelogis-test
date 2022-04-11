@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import { Table, Form } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { AddressSelect } from './AddressSelect/index';
-import { selectRequestAction } from '../../store/redusers/transportationRequestsReduser';
+import { selectRequestAction } from '../../store/actions/selectRequestAction';
 
 export const TransportationTable = ({ onApplicationChanges }) => {
   const dispatch = useDispatch();
@@ -33,12 +33,14 @@ export const TransportationTable = ({ onApplicationChanges }) => {
     },
   ];
 
+  const handleAdressPoints = (values) => console.log(values);
+
   const handleSelectedRequest = (_, selectedRows) => {
     dispatch(selectRequestAction(selectedRows[0]));
   };
 
   return (
-    <Form form={form} onValuesChange={onApplicationChanges}>
+    <Form form={form} onValuesChange={handleAdressPoints}>
       <Table
         scroll={{ x: true }}
         pagination={{ position: ['bottomCenter'] }}
