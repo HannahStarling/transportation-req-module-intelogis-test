@@ -13,13 +13,13 @@ import { MOSCOW_CENTER, RED_PATH_POLYLINE } from './constants';
 // указываем путь к файлам marker
 L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.5.0/dist/images/';
 
-export const Map = ({ onApplicationChange }) => {
+export const Map = () => {
   const selected = useSelector(
     (state) => state.transportationRequests.selected
   );
 
   const polyline = selected
-    ? [selected.loadingPoint.address.bound, selected.dropPoint.address.bound]
+    ? [selected.loadingPoint.bound, selected.dropPoint.bound]
     : null;
 
   return (
