@@ -1,16 +1,11 @@
 import React from 'react';
 import L from 'leaflet';
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  Polyline,
-} from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useSelector } from 'react-redux';
-import { MOSCOW_CENTER, RED_PATH_POLYLINE } from './constants';
+import { MOSCOW_CENTER, PATH_POLYLINE } from './constants';
+import { Routing } from './Routing';
 
-// указываем путь к файлам marker
+// путь к файлам marker
 L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.5.0/dist/images/';
 
 export const Map = () => {
@@ -18,9 +13,8 @@ export const Map = () => {
     (state) => state.transportationRequests.selected
   );
 
-  const polyline = selected
-    ? [selected.loadingPoint.bound, selected.dropPoint.bound]
-    : null;
+  const loadingPoint = selected?.loadingPoint.bound;
+  const dropPoint = selected?.dropPoint.bound;
 
   return (
     <MapContainer center={MOSCOW_CENTER} zoom={10}>
@@ -30,11 +24,15 @@ export const Map = () => {
       />
       {selected && (
         <>
-          <Polyline pathOptions={RED_PATH_POLYLINE} positions={polyline} />
-          <Marker position={polyline[0]}>
+          <Marker position={loadingPoint}>
             <Popup>{'Адрес зоны погрузки'}</Popup>
           </Marker>
-          <Marker position={polyline[polyline.length - 1]}>
+          <Routing
+            start={loadingPoint}
+            stop={dropPoint}
+            polyline={PATH_POLYLINE}
+          />
+          <Marker position={dropPoint}>
             <Popup>{'Адрес зоны разгрузки'}</Popup>
           </Marker>
         </>
