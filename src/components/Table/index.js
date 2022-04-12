@@ -2,8 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Table, Form } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectRequestAction } from '../../store/actions/selectRequestAction';
-import { changeRequestAction } from '../../store/actions/changeRequestAction';
+import { selectRequestAction, changeRequestAction } from '../../store/actions';
 import {
   columns,
   addresses,
@@ -64,6 +63,7 @@ export const TransportationTable = () => {
   return (
     <Form form={form} onValuesChange={handleAdressPoints}>
       <Table
+        className="address__table"
         scroll={scrollOption}
         pagination={paginationPosition}
         columns={columns}
