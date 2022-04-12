@@ -61,7 +61,11 @@ export const TransportationTable = () => {
   });
 
   return (
-    <Form form={form} onValuesChange={handleAdressPoints}>
+    <Form
+      form={form}
+      onValuesChange={handleAdressPoints}
+      className="address__form"
+    >
       <Table
         className="address__table"
         scroll={scrollOption}
