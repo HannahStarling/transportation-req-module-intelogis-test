@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/transportation-req-module-intelogis-test/static/css/main.44d20636.css",
-    "main.js": "/transportation-req-module-intelogis-test/static/js/main.6921dcd6.js",
+    "main.css": "/transportation-req-module-intelogis-test/static/css/main.4bb4767d.css",
+    "main.js": "/transportation-req-module-intelogis-test/static/js/main.521f0d1c.js",
     "index.html": "/transportation-req-module-intelogis-test/index.html",
-    "main.44d20636.css.map": "/transportation-req-module-intelogis-test/static/css/main.44d20636.css.map",
-    "main.6921dcd6.js.map": "/transportation-req-module-intelogis-test/static/js/main.6921dcd6.js.map"
+    "main.4bb4767d.css.map": "/transportation-req-module-intelogis-test/static/css/main.4bb4767d.css.map",
+    "main.521f0d1c.js.map": "/transportation-req-module-intelogis-test/static/js/main.521f0d1c.js.map"
   },
   "entrypoints": [
-    "static/css/main.44d20636.css",
-    "static/js/main.6921dcd6.js"
+    "static/css/main.4bb4767d.css",
+    "static/js/main.521f0d1c.js"
   ]
 }
